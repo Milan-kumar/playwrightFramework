@@ -1,0 +1,7 @@
+{
+    "Module1TestData": {
+        "firstName": "firstTest-QA",
+        "lastName": "lastTest-QA",
+        "email": "test-QA@test.com"
+    }
+}
