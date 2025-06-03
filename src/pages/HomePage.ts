@@ -12,7 +12,8 @@ export class HomePage {
 
     // methods
     async enterUserDetails(firstName: string) {
-        await this.page.locator('.fc-button-label').first().click();
+        let consentBtn = this.page.locator('.fc-button-label').first();
+        if (await consentBtn.isVisible()) await consentBtn.click()
         await this.firstName.fill(firstName);
         expect(await this.firstName.inputValue()).toBe(firstName)
     }
