@@ -4,7 +4,7 @@ import { getPOSTAPIRequestBody } from "../../src/utils/APIHelper";
 
 test.use({ baseURL: process.env.API_BASE_URL })
 
-test('Get booking details', async ({ request }) => {
+test('Get booking details', {tag:['@PlaywrightWithJenkins']}, async ({ request }) => {
     const fname = faker.person.firstName("male");
     const lname = faker.person.lastName("male");
     const price = faker.number.int({ min: 1000, max: 10000 });
@@ -22,5 +22,6 @@ test('Get booking details', async ({ request }) => {
     console.log("RES: ", JSON.stringify(getJsonResponse, null, 2));
 
     expect(getResponse.status()).toBe(200);
-    expect(getResponse.statusText()).toBe("OK")
+    expect(getResponse.statusText()).toBe("OK-known")
+    // expect(getResponse.statusText()).toBe("OK")
 })
