@@ -1,7 +1,7 @@
 import { test } from "../src/fixtures/TestFixture"
 
 
-test('Register user', { tag: ['@SmokePipeline', '@PlaywrightWithJenkins'] }, async ({ page, basePage, homePage, testData }) => {
+test('Register user', { tag: ['@SmokePipeline', '@PlaywrightWithJenkins', '@PlaywrightWithAzureDevOpsPipeline'] }, async ({ page, basePage, homePage, testData }) => {
     console.log('Spec is running..', process.env.EXEC_ENV);
     await page.setViewportSize({
         width: 640,

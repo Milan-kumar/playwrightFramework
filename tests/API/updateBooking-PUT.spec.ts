@@ -4,7 +4,7 @@ import { getPOSTAPIRequestBody } from "../../src/utils/APIHelper";
 
 test.use({ baseURL: process.env.API_BASE_URL })
 
-test('Update booking details using PUT', async ({ request }) => {
+test('Update booking details using PUT', {tag:['@PWGitHubActions']}, async ({ request }) => {
     const fname = faker.person.firstName("male");
     const lname = faker.person.lastName("male");
     const price = faker.number.int({ min: 1000, max: 10000 });

@@ -14,11 +14,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+#Install node
   - task: NodeTool@0
     inputs:
       versionSpec: "18"
     displayName: "Install Node.js"
 
+#Check if npm is present
   - script: npm ci
     displayName: "npm ci"
 
